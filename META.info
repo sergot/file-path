@@ -1,0 +1,7 @@
+{
+    "name"          : "File::Path",
+    "version"       : "*",
+    "description"   : "File::Path for Perl 6.",
+    "depends"       : [],
+    "source-url"    : "git://github.com/sergot/file-path.git"
+}
