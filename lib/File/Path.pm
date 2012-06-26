@@ -9,10 +9,6 @@ sub mkpath(*@paths) is export {
     }
 }
 
-sub make_path(|$c(*@paths)) is export {
-    mkpath(|$c);
-}
-
 sub remove($path) {
     $path.d ?? rmdir $path !! unlink $path;
 }
@@ -41,10 +37,6 @@ sub rmtree(*@paths) is export {
         }
         remove $path.split(/\//)[0].IO;
     }
-}
-
-sub remove_tree(|$c(*@path)) is export {
-    rmtree(|$c);
 }
 
 # vim: ft=perl6:
